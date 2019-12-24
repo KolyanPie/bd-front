@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mirea.fxml.Login">
+    <Label text="Login"/>
+    <TextField fx:id="loginField"/>
+    <Label text="Pass"/>
+    <PasswordField fx:id="passField"/>
+    <HBox alignment="TOP_CENTER" prefHeight="30.0" prefWidth="600.0">
+        <Button mnemonicParsing="false" text="Exit" onAction="#clickExit"/>
+        <Button mnemonicParsing="false" text="Log in" onAction="#clickLogin"/>
+    </HBox>
+</VBox>
