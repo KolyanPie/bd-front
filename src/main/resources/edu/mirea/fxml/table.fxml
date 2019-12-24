@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mirea.fxml.Table">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="Tables" fx:id="menu">
+            <MenuItem mnemonicParsing="false" text="All" onAction="#mainPage"/>
+        </Menu>
+    </MenuBar>
+    <ScrollPane hbarPolicy="ALWAYS" vbarPolicy="ALWAYS">
+        <GridPane fx:id="gridPane" alignment="CENTER" gridLinesVisible="true">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+        </GridPane>
+    </ScrollPane>
+    <HBox alignment="CENTER">
+        <opaqueInsets>
+            <Insets/>
+        </opaqueInsets>
+        <VBox.margin>
+            <Insets/>
+        </VBox.margin>
+        <Button mnemonicParsing="false" onAction="#buttonClick" text="add"/>
+        <Button mnemonicParsing="false" onAction="#buttonClick" text="remove"/>
+    </HBox>
+</VBox>

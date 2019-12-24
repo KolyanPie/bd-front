@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" prefHeight="100.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mirea.fxml.Add">
+    <ScrollPane prefHeight="150.0">
+        <GridPane fx:id="gridPane" alignment="CENTER" gridLinesVisible="true">
+        </GridPane>
+    </ScrollPane>
+    <Button onAction="#click" text="add"/>
+</VBox>

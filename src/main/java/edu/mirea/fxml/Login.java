@@ -2,15 +2,11 @@ package edu.mirea.fxml;
 
 import edu.mirea.Vars;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-
 
 public class Login {
     private Alert wrongData;
@@ -31,8 +27,7 @@ public class Login {
     @FXML
     private void clickLogin() throws IOException {
         if (login(loginField.getText(), passField.getText())) {
-            Parent parent = FXMLLoader.load(getClass().getResource("main.fxml"));
-            Vars.stage.setScene(new Scene(parent));
+            Vars.changePage(getClass().getResource("main.fxml"));
         } else {
             wrongData.setContentText("wrong login or pass");
             wrongData.show();
