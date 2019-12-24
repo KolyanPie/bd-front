@@ -9,18 +9,11 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.FlowPane;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Main {
-    private Connection connection;
-    //FIXME:
-    private final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/test";
-    private final String USER = "username";
-    private final String PASS = "password";
 
     @FXML
     private Menu menu;
@@ -30,8 +23,6 @@ public class Main {
     @FXML
     private void initialize() {
         try {
-            connection = DriverManager.getConnection(DB_URL, USER, PASS);
-            Vars.statement = connection.createStatement();
             ResultSet resultSet = Vars.statement.executeQuery("SELECT table_name FROM information_schema.tables  where table_schema='public' ORDER BY table_name;");
             Vars.menuItems = new ArrayList<>();
             while (resultSet.next()) {
